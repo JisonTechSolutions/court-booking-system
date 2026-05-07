@@ -31,9 +31,7 @@ function toDateString(year, month, day) {
   return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
-const API_BASE = import.meta.env.PROD
-  ? "https://court-booking-system-1ghy.onrender.com"
-  : "";
+const API_BASE = import.meta.env.VITE_API_URL ?? "";
 
 export default function BookingForm() {
   const today = new Date();
@@ -128,7 +126,7 @@ export default function BookingForm() {
             <CheckCircle className="w-9 h-9 text-amber-400" />
           </div>
           <h2 className="text-2xl font-bold text-white mb-1">Court Reserved!</h2>
-          <p className="text-slate-500 text-sm mb-7">See you on the court!</p>
+          <p className="text-slate-500 text-sm mb-7">See you on the court!!!!!</p>
           <div className="bg-slate-800/70 rounded-xl p-4 text-left space-y-2.5 mb-8 border border-slate-700/40">
             <p className="text-sm">
               <span className="text-amber-400 font-semibold">Date — </span>
@@ -168,7 +166,7 @@ export default function BookingForm() {
 
         <div className="text-center mb-8">
           <p className="text-amber-400 text-xs font-bold tracking-[0.25em] uppercase mb-2">
-            Apex Pickleball Club
+            Jison Football Court
           </p>
           <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
             Reserve Your Court
