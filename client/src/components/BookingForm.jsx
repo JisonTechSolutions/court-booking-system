@@ -31,6 +31,9 @@ function toDateString(year, month, day) {
   return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
+const API_BASE = import.meta.env.PROD
+  ? "https://court-booking-system-1ghy.onrender.com"
+  : "";
 
 export default function BookingForm() {
   const today = new Date();

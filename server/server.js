@@ -4,7 +4,9 @@ const cors    = require('cors')
 const app = express()
 const PORT = 3001
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://jisontechsolutions.github.io'
+}))
 app.use(express.json())
 
 app.post('/api/bookings', (req, res) => {
