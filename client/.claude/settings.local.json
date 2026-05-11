@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const lock = require\\('./package-lock.json'\\); console.log\\('lockfileVersion:', lock.lockfileVersion\\); const pkgs = Object.keys\\(lock.packages || {}\\).filter\\(k => ['vite','react','react-dom'].some\\(p => k.endsWith\\('/'+p\\)\\)\\); pkgs.forEach\\(k => console.log\\(k, lock.packages[k].version\\)\\)\")",
+      "Bash(node -e \"const chunks=[]; process.stdin.on\\('data',c=>chunks.push\\(c\\)\\); process.stdin.on\\('end',\\(\\)=>{const lock=JSON.parse\\(chunks.join\\(''\\)\\); const pkgs=Object.keys\\(lock.packages||{}\\).filter\\(k=>['vite','react','react-dom'].some\\(p=>k.endsWith\\('/'+p\\)\\)\\); pkgs.forEach\\(k=>console.log\\(k, lock.packages[k].version\\)\\)}\\)\")",
+      "Bash(git checkout *)",
+      "Bash(node -e \"const lock = require\\('./package-lock.json'\\); const pkgs = Object.keys\\(lock.packages || {}\\).filter\\(k => ['vite','react','react-dom'].some\\(p => k.endsWith\\('/'+p\\)\\)\\); pkgs.forEach\\(k => console.log\\(k, lock.packages[k].version\\)\\)\")",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
