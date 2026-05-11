@@ -1,0 +1,8 @@
+# amplify
+node_modules
+.amplify
+# amplify_outputs.json is committed as a stub for Amplify Hosting builds.
+# Replace with real values after running: npx ampx sandbox
+amplifyconfiguration*
+
+amplify_outputs*
